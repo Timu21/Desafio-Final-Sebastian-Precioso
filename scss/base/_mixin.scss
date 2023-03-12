@@ -1,0 +1,10 @@
+// mixins
+
+@mixin grid{
+    gap: 1rem;
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: 2.5fr 1.5fr 1.5fr;
+    grid-template-rows: auto;
+}
+    

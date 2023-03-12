@@ -1,0 +1,292 @@
+/*reset*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+/* estilos generales */
+main h1, main .titular_titulo-uno, main .titular_titulo-dos, section h2, section div ul li h3, footer h4 {
+  text-align: center;
+  font-style: oblique; }
+
+/*propiedades de body*/
+body {
+  height: 1000px;
+  background-image: linear-gradient(to bottom, rgba(227, 241, 250, 0), #96ee96, rgba(227, 241, 250, 0), #9b9bf8, rgba(227, 241, 250, 0)); }
+
+/*propiedades header*/
+header {
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: space-between;
+  justify-content: space-evenly;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding: 0.7rem;
+  align-items: center; }
+  header nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1rem; }
+    header nav ul li {
+      font-weight: bold;
+      font-size: 3vh;
+      align-content: space-between; }
+  header .item-fixed {
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+    width: 15vh;
+    height: auto; }
+  header .item-relative {
+    position: relative;
+    width: 15vh;
+    height: auto;
+    box-shadow: 6px 6px 10px black; }
+
+/*propiedades main*/
+main h1 {
+  font-size: 10vh; }
+
+main .enlaces {
+  text-align: center;
+  margin: 20px;
+  display: flex;
+  justify-content: center; }
+
+main .titular_titulo-uno {
+  font-size: 8vh;
+  margin-top: 40px; }
+
+main .titular_titulo-dos {
+  font-size: 6vh;
+  margin-top: 40px; }
+
+main .redactor {
+  text-align: justify;
+  font-size: 3.5vh;
+  margin: 1rem;
+  padding: 10vh; }
+
+main .redactor span {
+  display: block;
+  margin-top: 20px; }
+
+main .publicidad {
+  background-color: #fad090;
+  text-align: center;
+  justify-content: center;
+  padding: 5vh;
+  box-shadow: 6px 6px 10px black; }
+
+main .slider-frame {
+  width: 70vh;
+  height: auto;
+  margin: 50px auto 0;
+  overflow: hidden;
+  box-shadow: 0px 0px 100px #ddc53d; }
+  main .slider-frame ul {
+    display: flex;
+    padding: 0;
+    width: 400%;
+    animation: slide 12s infinite alternate ease-in-out; }
+    main .slider-frame ul li {
+      width: 100%;
+      list-style: none; }
+    main .slider-frame ul img {
+      width: 100%; }
+
+@keyframes slide {
+  0% {
+    margin-left: 0; }
+  20% {
+    margin-left: 0; }
+  25% {
+    margin-left: -100%; }
+  45% {
+    margin-left: -100%; }
+  50% {
+    margin-left: -200%; }
+  70% {
+    margin-left: -200%; }
+  75% {
+    margin-left: -300%; }
+  95% {
+    margin-left: -300%; } }
+
+/*estilo section*/
+section h2 {
+  font-size: 6vh;
+  margin-top: 30px; }
+
+section div ul li {
+  list-style: none; }
+  section div ul li h3 {
+    font-size: 4vh;
+    margin-top: 15px; }
+  section div ul li a {
+    font-size: 3vh;
+    color: black; }
+
+/*estilo footer*/
+footer {
+  background-color: whitesmoke;
+  text-align: center; }
+  footer h4 {
+    font-size: 4vh;
+    margin-top: 30px;
+    margin-bottom: 15px; }
+
+/*propiedades flex*/
+.flex-uno {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: flex-end; }
+
+/*propiedades hijos flex*/
+.hijos-flex {
+  width: 500px;
+  height: 550px;
+  margin: 5vh;
+  box-shadow: 6px 6px 10px black; }
+
+/*porpiedades grid*/
+.grid {
+  gap: 1rem;
+  padding: 3rem;
+  display: grid;
+  grid-template-columns: 2.5fr 1.5fr 1.5fr;
+  grid-template-rows: auto;
+  /*grid template areas*/
+  grid-template-areas: "parrafo-uno parrafo-uno publicidad" "parrafo-dos parrafo-dos publicidad" "parrafo-tres parrafo-tres parrafo-tres"; }
+
+/*estilo de los items*/
+.parrafo-uno {
+  grid-area: parrafo-uno; }
+
+.parrafo-dos {
+  grid-area: parrafo-dos; }
+
+.parrafo-tres {
+  grid-area: parrafo-tres; }
+
+.publicidad {
+  grid-area: publicidad; }
+
+/*porpiedades  grid infantiles*/
+.grid-infantiles {
+  gap: 1rem;
+  padding: 3rem;
+  display: grid;
+  grid-template-columns: 2.5fr 1.5fr 1.5fr;
+  grid-template-rows: auto;
+  /*grid template  areas infantiles*/
+  grid-template-areas: "texto-uno texto-uno video" "texto-dos texto-dos texto-dos" "publicidad texto-tres texto-tres"; }
+
+/*estilo de los items infantiles*/
+.texto-uno {
+  grid-area: texto-uno; }
+
+.texto-dos {
+  grid-area: texto-dos; }
+
+.texto-tres {
+  grid-area: texto-tres; }
+
+.publicidad {
+  grid-area: publicidad; }
+
+.video {
+  grid-area: video; }
+
+/*pantalla celular*/
+@media screen and (max-width: 750px) and (min-width: 1px) {
+  /* estilos de main*/
+  main {
+    flex-direction: column;
+    align-items: center; }
+  main div h2 {
+    display: none; }
+  section {
+    display: none; }
+  .parrafo-dos {
+    display: none; }
+  .parrafo-tres {
+    display: none; }
+  /*porpiedades grid*/
+  .grid {
+    display: grid;
+    grid-template-columns: 2fr;
+    grid-template-rows: 1fr 0.7fr;
+    gap: 1rem;
+    padding: 2rem;
+    /*grid template areas*/
+    grid-template-areas: "parrafo-uno" "publicidad"; }
+  /*propiedades infantiles*/
+  main {
+    flex-direction: column;
+    align-items: center;
+    align-items: center; }
+  .texto-dos {
+    display: none; }
+  .texto-tres {
+    display: none; }
+  /*porpiedades  grid infantiles*/
+  .grid-infantiles {
+    display: grid;
+    grid-template-columns: 2fr;
+    grid-template-rows: 0.7fr 0.7fr 0.5fr;
+    gap: 1rem;
+    padding: 2rem;
+    /*grid template  areas infantiles*/
+    grid-template-areas: "texto-uno" "video" "publicidad"; }
+  /*estilo de los items infantiles*/
+  .texto-uno {
+    grid-area: texto-uno; }
+  .publicidad {
+    grid-area: publicidad; }
+  .video {
+    grid-area: video; } }
+
+/*pantalla tablet*/
+@media screen and (max-width: 1024px) and (min-width: 751px) {
+  /* estilos de main*/
+  main {
+    flex-direction: column;
+    align-items: center; }
+  .parrafo-dos {
+    display: none; }
+  /*porpiedades grid*/
+  .grid {
+    display: grid;
+    grid-template-columns: 2fr  2fr;
+    grid-template-rows: 2fr 1fr;
+    gap: 1rem;
+    padding: 1rem;
+    /*grid template areas*/
+    grid-template-areas: "parrafo-uno parrafo-tres" "publicidad publicidad"; }
+  /*propiedades infantiles*/
+  main {
+    flex-direction: column;
+    align-items: center; }
+  .texto-dos {
+    display: none; }
+  .texto-tres {
+    display: none; }
+  /*porpiedades  grid infantiles*/
+  .grid-infantiles {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: 0.7fr 0.7fr;
+    gap: 1rem;
+    padding: 2rem;
+    /*grid template  areas infantiles*/
+    grid-template-areas: "texto-uno texto-uno" "video publicidad"; }
+  /*estilo de los items infantiles*/
+  .texto-uno {
+    grid-area: texto-uno; }
+  .publicidad {
+    grid-area: publicidad; }
+  .video {
+    grid-area: video; } }
